@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motoristas Disponíveis</title>
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 15px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.motorista {
+    border-bottom: 1px solid #ccc;
+    padding: 15px 0;
+}
+
+.motorista:last-child {
+    border-bottom: none;
+}
+
+.motorista h3 {
+    margin: 5px 0;
+    color: #007bff;
+}
+
+.motorista p {
+    margin: 3px 0;
+    font-size: 14px;
+    color: #555;
+}
+
+.contato {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.contato a {
+    text-decoration: none;
+    color: white;
+    background: #28a745;
+    padding: 8px 15px;
+    border-radius: 5px;
+    display: inline-block;
+    font-size: 14px;
+}
+
+.contato a:hover {
+    opacity: 0.8;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .motorista p {
+        font-size: 13px;
+    }
+
+    .contato {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contato a {
+        width: 80%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .motorista p {
+        font-size: 12px;
+    }
+
+    .contato a {
+        width: 100%;
+    }
+}
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Motoristas Disponíveis</h1>
+</header>
+
+<div class="container">
+    <div class="motorista">
+        <h3>João Silva</h3>
+        <p><strong>Carro:</strong> Ford Ka - Preto - 2019</p>
+        <p><strong>Placa:</strong> ABC-1234</p>
+        <p><strong>Endereço de partida:</strong> Centro</p>
+        <p><strong>Vagas disponíveis:</strong> 2</p>
+        <div class="contato">
+            <a href="https://wa.me/5561996755169" target="_blank">WhatsApp</a>
+            <a href="mailto:joao@email.com">E-mail</a>
+        </div>
+    </div>
+
+    <div class="motorista">
+        <h3>Maria Oliveira</h3>
+        <p><strong>Carro:</strong> Honda Civic - Branco - 2021</p>
+        <p><strong>Placa:</strong> DEF-5678</p>
+        <p><strong>Endereço de partida:</strong>Parque Estrela Dalva 2</p>
+        <p><strong>Vagas disponíveis:</strong> 3</p>
+        <div class="contato">
+            <a href="https://wa.me/5561996755169" target="_blank">WhatsApp</a>
+            <a href="mailto:maria@email.com">E-mail</a>
+        </div>
+    </div>
+
+    <div class="motorista">
+        <h3>Carlos Souza</h3>
+        <p><strong>Carro:</strong> Volkswagen Gol - Cinza - 2017</p>
+        <p><strong>Placa:</strong> GHI-9012</p>
+        <p><strong>Endereço de partida:</strong>Bairro JK</p>
+        <p><strong>Vagas disponíveis:</strong> 1</p>
+        <div class="contato">
+            <a href="https://wa.me/5561996755169" target="_blank">WhatsApp</a>
+            <a href="mailto:carlos@email.com">E-mail</a>
+        </div>
+    </div>
+
+    <div class="motorista">
+        <h3>Victor Hugo</h3>
+        <p><strong>Carro:</strong> Fiat Grand Siena - Branco - 2014</p>
+        <p><strong>Placa:</strong> GHI-9012</p>
+        <p><strong>Endereço de partida:</strong> Setor Leste</p>
+        <p><strong>Vagas disponíveis:</strong> 1</p>
+        <div class="contato">
+            <a href="https://wa.me/5561996755169" target="_blank">WhatsApp</a>
+            <a href="mailto:carlos@email.com">E-mail</a>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

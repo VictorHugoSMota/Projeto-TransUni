@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quero uma Carona</title>
+    <link rel="stylesheet" href="css/quero-carona.css">
+</head>
+<body>
+
+    <header>
+        <h1>TransUni</h1>
+        <nav>
+            <a href="index.html">Início</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Quero uma Carona</h2>
+        <form action="#" method="POST">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="whatsapp">WhatsApp:</label>
+            <input type="tel" id="whatsapp" name="whatsapp" required placeholder="(XX) XXXXX-XXXX">
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="Turno">Turno:</label>
+            <select id="Turno" name="Turno" required>
+                <option value="" disabled selected>Selecione o Período</option>
+                <option value="manha">Manhã</option>
+                <option value="tarde">Tarde</option>
+                <option value="noite">Noite</option>
+            </select>
+
+            <label for="endereco">Endereço de Embarque:</label>
+            <input type="text" id="endereco" name="endereco" required>            
+
+            <label for="preferencia">Tem alguma preferência? (ex: "não gosto de música alta")</label>
+            <textarea id="preferencia" name="preferencia"></textarea>
+
+            <button type="submit">Solicitar Carona</button>
+        </form>
+    </main>
+
+</body>
+</html>
