@@ -6,17 +6,13 @@
     <title>TransUni</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&display=swap" rel="stylesheet">
-
-
-    
 </head>
 <body>
 
     <header>
         <h1>TransUni</h1>
         <nav>
-            <a href="loguin.html">Já tenho conta</a>
-            <a href="criar-conta.html">Criar conta</a>
+            <span id="menu-usuario"></span>
         </nav>
     </header>
 
@@ -47,6 +43,22 @@
             <p>&copy; 2025 TRANSUNI. Todos os direitos reservados.</p>
         </div>
     </footer>
+
+    <script>
+        const nomeUsuario = localStorage.getItem('usuarioLogado');
+        const menu = document.getElementById('menu-usuario');
+
+        if (nomeUsuario) {
+            menu.innerHTML = `Olá, ${nomeUsuario}! <button onclick="logout()" style="margin-left: 10px;">Sair</button>`;
+        } else {
+            menu.innerHTML = `<a href="criar-conta.html">Criar Conta / Logar</a>`;
+        }
+
+        function logout() {
+            localStorage.removeItem('usuarioLogado');
+            location.reload();
+        }
+    </script>
 
 </body>
 </html>
