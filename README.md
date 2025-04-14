@@ -1,8 +1,8 @@
-# Projeto TransUni
+# 📋 Projeto TransUni
 Projeto de um site de caronas universitárias desenvolvido com o objetivo de conectar motoristas e passageiros de forma simples e eficiente. 
 O TransUni simula uma plataforma onde usuários podem oferecer ou solicitar caronas, promovendo economia, praticidade e sustentabilidade no deslocamento até a faculdade.
 
-## Tecnologias:
+## 🛠️ Tecnologias:
 - HTML
 - CSS
 
