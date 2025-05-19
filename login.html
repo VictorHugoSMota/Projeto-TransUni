@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Criar Conta - TransUni</title>
+  <title>Login - TransUni</title>
   <style>
     body {
       font-family: 'Oxygen', 'san-serif';
@@ -56,6 +56,23 @@
       box-sizing: border-box;
     }
 
+    p {
+      margin-top: 20px;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      font-size: 16px;
+      color: #555;
+    }
+
+    p a {
+      color: #007bff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    p a:hover {
+      text-decoration: underline;
+    }
+
     /* Responsividade */
     @media screen and (max-width: 480px) {
       .btn {
@@ -73,26 +90,16 @@
 <body>
 
   <main>
-    <h2>Criar Conta</h2>
-    <form id="registerForm">
-      <input type="text" id="novoUsuario" placeholder="Novo usuário" required><br><br>
-      <input type="password" id="novaSenha" placeholder="Nova senha" required><br><br>
-      <button type="submit" class="btn">Cadastrar</button>
+    <h2>Login</h2>
+    <form id="loginForm">
+      <input type="text" id="usuario" placeholder="Usuário" required><br><br>
+      <input type="password" id="senha" placeholder="Senha" required><br><br>
+      <button type="submit" class="btn">Entrar</button>
     </form>
+
+    <p><a href="criar-conta.html">Criar conta</a> | <a href="esqueceu.html">Esqueceu a senha?</a></p>
   </main>
 
-  <script>
-    const form = document.getElementById('registerForm');
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-      const user = document.getElementById('novoUsuario').value;
-      const pass = document.getElementById('novaSenha').value;
-      localStorage.setItem('usuarioSalvo', user);
-      localStorage.setItem('senhaSalva', pass);
-      alert('Conta criada com sucesso!');
-      window.location.href = 'login.html';
-    });
-  </script>
-
+  <script src="js/auth.js"></script>
 </body>
 </html>
