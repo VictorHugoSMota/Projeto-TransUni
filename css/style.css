@@ -14,7 +14,6 @@ body {
     min-height: 100vh;
 }
 
-/* HEADER */
 header {
     background-color: #0d47a1;
     color: white;
@@ -28,6 +27,7 @@ header {
 
 header h1 {
     font-size: 28px;
+    margin: 0;
 }
 
 nav a, #menu-usuario {
@@ -37,7 +37,6 @@ nav a, #menu-usuario {
     font-size: 16px;
 }
 
-/* MAIN */
 main {
     flex: 1;
     display: flex;
@@ -87,7 +86,6 @@ h2 {
     opacity: 0.9;
 }
 
-/* FOOTER */
 footer {
     background-color: #263238;
     color: #ccc;
@@ -125,7 +123,6 @@ footer {
     margin-top: 15px;
 }
 
-/* RESPONSIVO */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
