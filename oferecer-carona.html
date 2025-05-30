@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="css/oferecer-carona.css">
 </head>
 <body>
-
     <header>
         <h1>TransUni</h1>
         <nav>
@@ -17,7 +16,7 @@
 
     <main>
         <h2>Oferecer Carona</h2>
-        <form action="#" method="POST">
+        <form id="caronaForm">
             <label for="nome">Nome:</label>
             <input type="text" id="nome" name="nome" required>
 
@@ -30,9 +29,9 @@
             <label for="Turno">Turno:</label>
             <select id="Turno" name="Turno" required>
                 <option value="" disabled selected>Selecione o Período</option>
-                <option value="manha">Manhã</option>
-                <option value="tarde">Tarde</option>
-                <option value="noite">Noite</option>
+                <option value="Manhã">Manhã</option>
+                <option value="Tarde">Tarde</option>
+                <option value="Noite">Noite</option>
             </select>
 
             <label for="endereco">Endereço de Partida:</label>
@@ -57,15 +56,62 @@
 
             <label for="ar">Possui Ar-condicionado?</label>
             <select id="ar" name="ar">
-                <option value="sim">Sim</option>
-                <option value="nao">Não</option>
+                <option value="Sim">Sim</option>
+                <option value="Não">Não</option>
             </select>
 
-            <a href="motoristas-disponiveis.html">
-                <button type="button">Oferecer Carona</button>
-            </a>
+            <button type="submit">Oferecer Carona</button>
         </form>
     </main>
-
 </body>
+    <script>
+    const form = document.getElementById('caronaForm');
+
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const nome = document.getElementById('nome').value.trim();
+        const whatsapp = document.getElementById('whatsapp').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const turno = document.getElementById('Turno').value;
+        const endereco = document.getElementById('endereco').value.trim();
+        const vagas = document.getElementById('vagas').value;
+        const modelo = document.getElementById('modelo').value.trim();
+        const cor = document.getElementById('cor').value.trim();
+        const ano = document.getElementById('ano').value;
+        const placa = document.getElementById('placa').value.trim();
+        const ar = document.getElementById('ar').value;
+
+        if (!nome || !whatsapp || !email || !turno || !endereco || !vagas || !modelo || !cor || !ano) {
+            alert('Preencha todos os campos obrigatórios.');
+            return;
+        }
+
+        const motorista = {
+            nome,
+            whatsapp,
+            email,
+            turno,
+            endereco,
+            vagas,
+            modelo,
+            cor,
+            ano,
+            placa,
+            ar
+        };
+
+        // Obtém motoristas existentes no localStorage ou inicia com lista vazia
+        const motoristas = JSON.parse(localStorage.getItem('motoristas')) || [];
+
+        // Adiciona o novo motorista
+        motoristas.push(motorista);
+
+        // Salva novamente no localStorage
+        localStorage.setItem('motoristas', JSON.stringify(motoristas));
+
+        // Redireciona para a página que lista os motoristas
+        window.location.href = 'motoristas-disponiveis.html'; // altere conforme o nome do seu arquivo HTML da lista
+    });
+</script>
 </html>

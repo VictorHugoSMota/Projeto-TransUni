@@ -103,6 +103,7 @@ header {
 }
     </style>
 </head>
+
 <body>
 
 <header>
@@ -161,4 +162,26 @@ header {
 </div>
 
 </body>
+<script>
+    const container = document.querySelector('.container')
+    const dadosSalvos = JSON.parse(localStorage.getItem('motoristas')) || []
+
+    dadosSalvos.forEach(motorista => {
+        const div = document.createElement('div')
+        div.className = 'motorista'
+
+        div.innerHTML = `
+            <h3>${motorista.nome}</h3>
+            <p><strong>Carro:</strong> ${motorista.modelo} - ${motorista.cor} - ${motorista.ano}</p>
+            <p><strong>Placa:</strong> ${motorista.placa || 'Não informada'}</p>
+            <p><strong>Endereço de partida:</strong> ${motorista.endereco}</p>
+            <p><strong>Vagas disponíveis:</strong> ${motorista.vagas}</p>
+            <div class="contato">
+                <a href="https://wa.me/${motorista.whatsapp.replace(/\D/g, '')}" target="_blank">WhatsApp</a>
+                <a href="mailto:${motorista.email}">E-mail</a>
+            </div>
+        `
+        container.appendChild(div)
+    })
+</script>
 </html>
