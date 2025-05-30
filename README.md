@@ -5,6 +5,7 @@ O TransUni simula uma plataforma onde usuários podem oferecer ou solicitar caro
 ## 🛠️ Tecnologias:
 - HTML
 - CSS
+- JavaScript
 
 ### Link para acesso do Projeto:
 https://projeto-trans-uni.vercel.app/
